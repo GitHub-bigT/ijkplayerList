@@ -5,6 +5,7 @@ import android.net.Uri;
 import oracle.ijkplayerlist.base.BaseActivity;
 import oracle.ijkplayerlist.R;
 
+import oracle.ijkplayerlist.constants.PlayerConstants;
 import tv.danmaku.ijk.media.player.widget.IjkVideoView;
 
 /**
@@ -28,7 +29,7 @@ public class IjkPlayerActivity extends BaseActivity {
     }
 
     private void initIjk() {
-        ijk_video_view.setVideoURI(Uri.parse("http://zv.3gv.ifeng.com/live/zhongwen800k.m3u8"));
+        ijk_video_view.setVideoURI(Uri.parse(PlayerConstants.VIDEO_URL));
         ijk_video_view.start();
     }
 
