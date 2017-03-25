@@ -1,8 +1,6 @@
-package oracle.ijkplayerlist;
+package oracle.ijkplayerlist.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,30 +8,31 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import oracle.ijkplayerlist.activity.IjkPlayerActivity;
+import oracle.ijkplayerlist.R;
 import oracle.ijkplayerlist.adapter.RVMainAdapter;
+import oracle.ijkplayerlist.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity implements RVMainAdapter.OnItemClickListener {
+public class MainActivity extends BaseActivity implements RVMainAdapter.OnItemClickListener {
 
     private RecyclerView rv_main;
     private List<String> mList;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initView();
+    public int initLayout() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initView() {
+        rv_main = (RecyclerView) findViewById(R.id.rv_main);
+        initData();
+        initRecycleView();
     }
 
     private void initData() {
         mList = new ArrayList<>();
         mList.add("ijk原始");
-    }
-
-    private void initView() {
-        rv_main = (RecyclerView) findViewById(R.id.rv_main);
-        initData();
-        initRecycleView();
     }
 
     private void initRecycleView() {

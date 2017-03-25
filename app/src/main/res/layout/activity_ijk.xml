@@ -7,5 +7,5 @@
     <tv.danmaku.ijk.media.player.widget.IjkVideoView
         android:id="@+id/ijk_video_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></tv.danmaku.ijk.media.player.widget.IjkVideoView>
+        android:layout_height="wrap_content"></tv.danmaku.ijk.media.player.widget.IjkVideoView>
 </LinearLayout>
