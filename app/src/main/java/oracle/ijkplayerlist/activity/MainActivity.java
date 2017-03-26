@@ -13,6 +13,7 @@ import java.util.List;
 import oracle.ijkplayerlist.R;
 import oracle.ijkplayerlist.adapter.RVMainAdapter;
 import oracle.ijkplayerlist.base.BaseActivity;
+import tcking.github.com.giraffeplayer.GiraffePlayer;
 
 public class MainActivity extends BaseActivity implements RVMainAdapter.OnItemClickListener {
 
@@ -36,6 +37,7 @@ public class MainActivity extends BaseActivity implements RVMainAdapter.OnItemCl
         mList = new ArrayList<>();
         mList.add("ijk原始");
         mList.add("SuperPlayer");
+        mList.add("GiraffePlayer");
     }
 
     private void initRecycleView() {
@@ -53,10 +55,15 @@ public class MainActivity extends BaseActivity implements RVMainAdapter.OnItemCl
                 Intent intent1 = new Intent(MainActivity.this, IjkPlayerActivity.class);
                 startActivity(intent1);
                 break;
-            //SuperPlayer二次封装(UI、支持直播、点播)
+            //SuperPlayer 二次封装(UI、支持直播、点播)
             case 1:
                 Intent intent2 = new Intent(MainActivity.this, SuperPlayerActivity.class);
                 startActivity(intent2);
+                break;
+            //GiraffePlayer 二次封装(UI、支持直播、点播)
+            case 2:
+                Intent intent3 = new Intent(MainActivity.this, GiraffeActivity.class);
+                startActivity(intent3);
                 break;
         }
     }

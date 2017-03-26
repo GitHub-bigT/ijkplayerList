@@ -25,6 +25,7 @@
             android:name=".activity.SuperPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="sensor" />
+        <activity android:name=".activity.GiraffeActivity" />
     </application>
 
 </manifest>
